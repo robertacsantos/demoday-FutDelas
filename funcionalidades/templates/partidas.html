@@ -1,0 +1,24 @@
+{% extends 'shared/layout.html' %}
+{% load static %}
+{% block conteudo %}
+
+<h1>FutDelas</h1>
+{% if pessoa is None %}
+    <h1>Ops, você precisa se cadastrar</h1>
+    <p>
+        <a href="/">clique aqui para se cadastrar</a>
+    </p>
+{% else %}
+<h2>Cadastre a sua ideia {{pessoa.nome}}</h2>
+<form action="/partidas" method="post">
+    {% csrf_token %}
+    <input type="hidden" name="email" value="{{pessoa.email}}">
+    <input type="text" name="titulo" placeholder="Partida">
+    <label for="descricao">Descreva sua ideia</label>
+    <textarea name="descricao" cols="30" rows="10">
+    </textarea>
+    <input type="submit" value="Cadastrar Partida">
+</form>
+
+{% endif %}
+{% endblock %}

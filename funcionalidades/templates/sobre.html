@@ -1,0 +1,24 @@
+{% extends 'shared/layout.html' %}
+{% load static %}
+
+
+{% block conteudo %}
+
+
+<h1>Listagem das Ideias</h1>
+<p>
+        {% for ideia in ideias %}
+                <a href="/remover_ideia/{{ideia.id}}"><input type="button"  value='Deletar'></a>
+                <p>{{partida.pessoa.nome}}</p>
+                <p>{{partida.titulo}}</p>
+                <p>{{partida.categoria}}</p>
+                <p>{{partida.descricao}}</p>
+                <p id="linha">____________________</p>
+                
+        {% endfor %}
+       
+</p>
+
+
+
+{% endblock %}

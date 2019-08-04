@@ -1,0 +1,28 @@
+{% extends 'shared/layout.html' %}
+{% load static %}
+{% block conteudo %}
+
+<h1>Ideias Malucas</h1>
+<h2>Cadastre-se</h2>
+{{msg}}
+<form action="index" method="post">
+    {% csrf_token %}
+    <label>Nome</label>
+    <input type="text" name="nome" required>
+
+    <label>Sobrenome</label>
+    <input type="text" name="sobrenome" required>
+
+    <label>Idade</label>
+    <input type="date" name="idade" required>
+
+    <label>E-mail</label>
+    <input type="email" name="email" required>
+
+    <label>Senha</label>
+    <input type="password" name="senha" required>
+
+    <input type="submit" value="Cadastrar">
+</form>
+
+{% endblock %}

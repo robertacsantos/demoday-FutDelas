@@ -1,0 +1,25 @@
+{% extends 'shared/layout.html' %}
+{% load static %}
+
+{% block conteudo %}
+
+<form action="/funcionalidades/templates/index.html" method="post">
+    {% csrf_token %}
+    <a href="index">
+        Cadastre-se
+    </a>
+</form>    
+<form action="/funcionalidades/templates/login.html" method="post">
+    {% csrf_token %}
+    <a href="login">
+        Já é Cadastrado?
+    </a>
+</form>  
+<form action="/funcionalidades/templates/sobre.html" method="post">
+    {% csrf_token %}
+    <a href="sobre">
+        Conheça nossas partidas
+    </a>
+</form>
+
+{% endblock %}

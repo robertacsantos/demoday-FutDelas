@@ -1,0 +1,31 @@
+__pycache__/
+
+#Distribution /packaging
+.Python
+
+#Django stuff:
+*.log
+local_settings.py 
+db.sqlite3
+
+#Envoriments
+
+.env 
+.venv
+env/
+venv/
+ENV/
+
+#mkdocs documentation
+
+/site 
+
+#mypy 
+.mypy_cache/
+
+#Ide
+
+.vscode
+.idea
+
+Pipfile

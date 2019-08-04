@@ -1,0 +1,16 @@
+{% extends 'shared/layout.html' %}
+{% load static %}
+
+{% block conteudo %}
+
+<h1>Login</h1>
+<p>{{msg}}</p>
+
+<form action="/login" method="post">
+    {% csrf_token %}
+    <input type="email" name="email" placeholder="E-mail">
+    <input type="password" name="senha" placeholder="Senha">
+    <input type="submit" value="Enviar">
+</form>
+
+{% endblock %}
