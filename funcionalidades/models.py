@@ -20,13 +20,14 @@ class Pessoa(models.Model):
         verbose_name='E-mail'
     )
 
-    idade = models.DateTimeField(
+    idade = models.CharField(
         max_length=255,
         verbose_name='Idade'
     )
     senha = models.CharField(
         max_length=255,
-        verbose_name='Senha'
+        null=True,
+        blank=True
     )
 
     data_de_criacao = models.DateTimeField(auto_now_add=True)

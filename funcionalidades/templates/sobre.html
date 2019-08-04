@@ -7,11 +7,11 @@
 
 <h1>Listagem das Ideias</h1>
 <p>
-        {% for ideia in ideias %}
-                <a href="/remover_ideia/{{ideia.id}}"><input type="button"  value='Deletar'></a>
+        {% for partida in partidas %}
+                <a href="/remover_partida/{{partida.id}}"><input type="button"  value='Deletar'></a>
                 <p>{{partida.pessoa.nome}}</p>
                 <p>{{partida.titulo}}</p>
-                <p>{{partida.categoria}}</p>
+                <p>{{partida.data}}</p>
                 <p>{{partida.descricao}}</p>
                 <p id="linha">____________________</p>
                 

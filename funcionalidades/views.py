@@ -54,10 +54,12 @@ def login(request):
         if pessoa is None:
             #mandar para página de cadastro
             contexto = {'msg': 'Cadastre-se para criar uma partida'}
+            print('partida')
             return render(request, 'index.html', contexto)
         else:
             #mandar para página de partidas
             contexto = {'pessoa': pessoa}
+            print('partida111')
             return render(request, 'partidas.html', contexto)
 
     return render(request, 'login.html', {})
@@ -66,14 +68,18 @@ def cadastrar_partida(request):
     if request.method == 'POST':
         email_pessoa = request.POST.get('email')
         senha_pessoa = request.POST.get('senha')
-        pessoa = Pessoa.objects.filter(email=email_pessoa, senha=senha_pessoa).first()
+        pessoa = Pessoa.objects.filter(email=email_pessoa).first()
+        senha = Pessoa.objects.filter(senha=senha_pessoa).first()
+        print('aq')
         if pessoa is not None:
+            print('a')
             partida = Partida()
             partida.pessoa = pessoa
             partida.titulo = request.POST.get('titulo')
             partida.descricao = request.POST.get('descricao')
+            partida.data = request.POST.get('data')
+            print('b')
             partida.save()
-
             return redirect('/sobre') 
-
-    return render(request, 'partida.html', {})
+    print('aaa')
+    return render(request, 'partidas.html', {})

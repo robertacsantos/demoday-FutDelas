@@ -13,10 +13,13 @@
 <form action="/partidas" method="post">
     {% csrf_token %}
     <input type="hidden" name="email" value="{{pessoa.email}}">
+    <input type="hidden" name="senha" value="{{pessoa.senha}}">
+
     <input type="text" name="titulo" placeholder="Partida">
-    <label for="descricao">Descreva sua ideia</label>
-    <textarea name="descricao" cols="30" rows="10">
+    <label>Descreva sua ideia</label>
+    <textarea name="descricao" cols="30" rows="10" placeholder="Escreva o local e contato para mais informações.">
     </textarea>
+    <input type="datetime" name="data">
     <input type="submit" value="Cadastrar Partida">
 </form>
 
