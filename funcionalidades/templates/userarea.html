@@ -1,0 +1,15 @@
+{% extends 'shared/layout.html' %}
+{% load static %}
+{% block conteudo %}
+
+{% for partida in partidas %}
+    <a href="/remover_partida/{{partida.id}}"><input type="button"  value='Deletar'></a>
+    <p>{{partida.pessoa.nome}}</p>
+    <p>{{partida.titulo}}</p>
+    <p>{{partida.data}}</p>
+    <p>{{partida.descricao}}</p>
+    <p id="linha">____________________</p>
+                
+{% endfor %}
+
+{% endblock %}

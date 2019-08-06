@@ -1,5 +1,6 @@
 from django.urls import path, include
-from funcionalidades.views import index, sobre, login, cadastrar_partida, home, remover_partida
+from funcionalidades.views import cadastrar_partida, home, remover_partida
+from funcionalidades.views import index, sobre, login, userarea
 from django.conf import settings
 from django.conf.urls.static import static
 
@@ -10,6 +11,7 @@ urlpatterns = [
     path('sobre', sobre),
     path('login', login),
     path('partidas', cadastrar_partida),
+    path('userarea', userarea),
     path('remover_partida/<int:id>/', remover_partida),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 # static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

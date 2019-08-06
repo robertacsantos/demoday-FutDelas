@@ -33,15 +33,27 @@ def sobre(request):
     }
     return render(request, 'sobre.html', contexto)
 
+def userarea(request):
+    email_form = request.POST.get('email')
+    senha_form = request.POST.get('senha')
+    
+    partidas = Partida.objects.filter(ativo=True).first()).all()
+    #ainda falta filtrar por pessoa.
+    contexto = {
+        'partidas':partidas
+    }
+    return render(request, 'userarea.html', contexto)       
+
 def remover_partida(request, id):
     partida = Partida.objects.filter(id=id).first()
     if partida is not None:
         partida.ativo = False
         partida.save()
-        return redirect('/sobre')
-    return render(request, 'sobre.html')    
+        return redirect('/userarea')
+    return render(request, 'userarea.html')    
 
 def login(request):
+    
     # Essa página irá conferir se existe um usuário
     # cadastrado, se sim retonará para página sobre
     # se não, retornará para página de cadastro com
@@ -54,12 +66,10 @@ def login(request):
         if pessoa is None:
             #mandar para página de cadastro
             contexto = {'msg': 'Cadastre-se para criar uma partida'}
-            print('partida')
             return render(request, 'index.html', contexto)
         else:
             #mandar para página de partidas
             contexto = {'pessoa': pessoa}
-            print('partida111')
             return render(request, 'partidas.html', contexto)
 
     return render(request, 'login.html', {})
@@ -70,16 +80,12 @@ def cadastrar_partida(request):
         senha_pessoa = request.POST.get('senha')
         pessoa = Pessoa.objects.filter(email=email_pessoa).first()
         senha = Pessoa.objects.filter(senha=senha_pessoa).first()
-        print('aq')
         if pessoa is not None:
-            print('a')
             partida = Partida()
             partida.pessoa = pessoa
             partida.titulo = request.POST.get('titulo')
             partida.descricao = request.POST.get('descricao')
             partida.data = request.POST.get('data')
-            print('b')
             partida.save()
             return redirect('/sobre') 
-    print('aaa')
     return render(request, 'partidas.html', {})
