@@ -34,10 +34,9 @@ def sobre(request):
     return render(request, 'sobre.html', contexto)
 
 def userarea(request):
-    email_form = request.POST.get('email')
-    senha_form = request.POST.get('senha')
+    # email_form = request.POST.get('email')
     
-    partidas = Partida.objects.filter(ativo=True).first()).all()
+    partidas = Partida.objects.filter(ativo=True).all()
     #ainda falta filtrar por pessoa.
     contexto = {
         'partidas':partidas
