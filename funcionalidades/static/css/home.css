@@ -1,6 +1,3 @@
-body{
-    background-color: pink;
-}
 
 header{
     background-image: url(/static/img/destaque-blue.jpg);
@@ -18,6 +15,6 @@ main{
 
 nav{
     color: black;
-    width: 20%;
-    height: 20%;
+    display: flex;
+    align-content: center
 }
