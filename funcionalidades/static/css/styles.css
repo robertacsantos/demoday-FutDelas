@@ -4,6 +4,7 @@ body{
     margin: 0;
     font-family: 'Montserrat', sans-serif;
 }
+
 /* nav{
     background-color: rgba(255,255,255,0.5);
     color: black;
@@ -13,12 +14,13 @@ body{
     align-items: center;
     justify-content: center;
 } */
+
 nav .menu{
   color: black;
   display: flex;
   width: 100%;
 }
-.menu p{
+/* .menu p{
   display: flex;
   height: 12vh;
   padding: 20px;
@@ -26,40 +28,19 @@ nav .menu{
   background-color: aqua;
   width: 100%;
   justify-content: flex-end;
-}
+} */
+
 .menu div{
   display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
-/* header{
-    background-color:#e6e6e6;
-    height: 30vh;
-} */
-/* header p{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 25px 0 0 0;
-} */
 
-/* h1{
-  padding: 20px;
-} */
+form a{
+  text-decoration: none;
+  color: white;
+}
 
-/* section{
-    padding: 20px;
-    min-height: 60vh;
-    max-height: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    font-size: 12pt;
-    flex-wrap: nowrap; 
-} */
-
-/* nav p{
-    margin:0;
-} */
 #linha{
     color: #473C8B;
 }

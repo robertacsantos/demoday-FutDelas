@@ -2,14 +2,28 @@ body{
     margin:0px;
 }
 header{
-    /* background-image: url(/static/img/destaque-blue.jpg);
     width: 100%;
-    opacity: 0.5; */
-    background-image: linear-gradient(to bottom right,#2E5902, #77A632, #84BF2C, #99BF73);
-    width:100%;
-    height: 499px;
+    height: 290px;
     margin: 70px 0 0 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
 }
+
+header::after {
+    content: "";
+    background: url(/static/img/foto.jpg);
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;   
+    background-repeat: no-repeat;
+  }
+
 
 main{
     background-color: white;
@@ -23,6 +37,15 @@ main{
     display: flex;
     align-content: center
 } */
+
+.formheader{
+    margin: 15px 0 15px 0;
+    border-radius: 15px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    background-color: #014040;
+}
 
 footer{
     background-image: linear-gradient(#836FFF, #473C8B);
