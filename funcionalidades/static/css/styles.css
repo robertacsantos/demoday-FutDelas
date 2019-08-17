@@ -4,7 +4,7 @@ body{
     margin: 0;
     font-family: 'Montserrat', sans-serif;
 }
-nav{
+/* nav{
     background-color: rgba(255,255,255,0.5);
     color: black;
     height: 80px;
@@ -12,23 +12,40 @@ nav{
     display: flex;
     align-items: center;
     justify-content: center;
+} */
+nav .menu{
+  color: black;
+  display: flex;
+  width: 100%;
 }
-header{
+.menu p{
+  display: flex;
+  height: 12vh;
+  padding: 20px;
+  position: fixed;
+  background-color: aqua;
+  width: 100%;
+  justify-content: flex-end;
+}
+.menu div{
+  display: flex;
+}
+/* header{
     background-color:#e6e6e6;
     height: 30vh;
-}
-header p{
+} */
+/* header p{
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 25px 0 0 0;
-}
+} */
 
-h1{
+/* h1{
   padding: 20px;
-}
+} */
 
-section{
+/* section{
     padding: 20px;
     min-height: 60vh;
     max-height: auto;
@@ -37,14 +54,12 @@ section{
     justify-content: center;
     flex-direction: column;
     font-size: 12pt;
-    flex-wrap: nowrap;
-    
-}
+    flex-wrap: nowrap; 
+} */
 
-nav p{
+/* nav p{
     margin:0;
-    font-size: 22pt;
-}
+} */
 #linha{
     color: #473C8B;
 }

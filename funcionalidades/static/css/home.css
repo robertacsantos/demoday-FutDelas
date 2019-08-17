@@ -1,9 +1,14 @@
-
+body{
+    margin:0px;
+}
 header{
-    background-image: url(/static/img/destaque-blue.jpg);
+    /* background-image: url(/static/img/destaque-blue.jpg);
     width: 100%;
-    height: 577px;
-    opacity: 0.5;
+    opacity: 0.5; */
+    background-image: linear-gradient(to bottom right,#2E5902, #77A632, #84BF2C, #99BF73);
+    width:100%;
+    height: 499px;
+    margin: 70px 0 0 0;
 }
 
 main{
@@ -13,11 +18,11 @@ main{
     height: 200px;
 }
 
-nav{
+/* nav{
     color: black;
     display: flex;
     align-content: center
-}
+} */
 
 footer{
     background-image: linear-gradient(#836FFF, #473C8B);
