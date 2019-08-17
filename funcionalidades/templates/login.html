@@ -3,14 +3,18 @@
 
 {% block conteudo %}
 
+<link rel="stylesheet" href="{% static 'css/login.css' %}">
+
+
 <h1>Login</h1>
 <p>{{msg}}</p>
+
+<img src="{% static 'img/user.png' %}" alt="">
 <form action="/login" method="post">
     {% csrf_token %}
     <input type="email" name="email" placeholder="E-mail">
     <input type="password" name="senha" placeholder="Senha">
     <input type="submit" value="Enviar">
 </form>
-
 
 {% endblock %}

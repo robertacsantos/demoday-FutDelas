@@ -18,3 +18,50 @@ nav{
     display: flex;
     align-content: center
 }
+
+footer{
+    background-image: linear-gradient(#836FFF, #473C8B);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+.patrocinadores{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.master{
+    width: 200px;
+}
+
+.hack{
+    width: 160px;
+}
+
+h3{
+    padding: 5px;
+}
+.icon{
+    padding-top: 20px;
+}
+
+.local{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.paulista{
+    padding-bottom: 5px;
+}
+
+.informacoes{
+    height: 220px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
