@@ -5,20 +5,22 @@ body{
     font-family: 'Montserrat', sans-serif;
 }
 
-/* nav{
-    background-color: rgba(255,255,255,0.5);
-    color: black;
-    height: 80px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-} */
-
-nav .menu{
-  color: black;
+.logo{
   display: flex;
-  width: 100%;
+}
+
+.info{
+  display: flex;
+}
+
+.menu{
+  display: flex;
+  justify-content: center;
+}
+.logo p{
+  color: white;
+  font-size: 50pt;
+  font-family: 'Caveat', cursive;
 }
 /* .menu p{
   display: flex;
@@ -33,7 +35,7 @@ nav .menu{
 .menu div{
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  /* justify-content: space-evenly; */
 }
 
 form a{
