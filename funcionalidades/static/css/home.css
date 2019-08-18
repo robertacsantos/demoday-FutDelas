@@ -25,18 +25,39 @@ header::after {
   }
 
 
+h1{
+    padding-bottom: 20px;
+    padding-top: 10px;
+    text-align-last: center;
+}
+
+main p{
+    text-align-last: center;
+}
+
 main{
-    background-color: white;
     background-color: white;
     width: 100%;
     height: 200px;
 }
 
-/* nav{
-    color: black;
+.mae{
     display: flex;
-    align-content: center
-} */
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.imagem{
+    margin: 16px;
+}
+
+.divspan{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
 
 .formheader{
     margin: 15px 0 15px 0;
@@ -44,11 +65,15 @@ main{
     padding: 15px;
     display: flex;
     flex-direction: column;
-    background-color: #014040;
+    background-color: #8C4C46;
+}
+
+.formheader :hover{
+    opacity: 0.2;
 }
 
 footer{
-    background-image: linear-gradient(#836FFF, #473C8B);
+    background-image: linear-gradient(#8C4C46, #401915);
     width: 100%;
     display: flex;
     align-items: center;
