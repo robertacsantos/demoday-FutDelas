@@ -5,24 +5,33 @@
 
 <link rel="stylesheet" href="{% static 'css/home.css' %}">
 <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Livvic&display=swap" rel="stylesheet">
 
 
 <header>
-    <h2>
-        E aí, artilheira! Crie sua partida ou jogue em uma!
-    </h2>
-    <form class="formheader" action="/funcionalidades/templates/index.html" method="post">
-        {% csrf_token %}
-        <a href="index">
-            Cadastre-se
-        </a>
-    </form>    
-    <form class="formheader" action="/funcionalidades/templates/login.html" method="post">
-        {% csrf_token %}
-        <a href="login">
-            Já é Cadastrado?
-        </a>
-    </form> 
+    <div class="text">
+        <h2>
+            E aí, artilheira! 
+            <p>
+                Crie sua partida ou jogue em uma!
+            </p>
+
+        </h2>
+    </div>
+    <div class="botoes">    
+        <form class="formheader" action="/funcionalidades/templates/index.html" method="post">
+            {% csrf_token %}
+            <a href="index">
+                Cadastre-se
+            </a>
+        </form>    
+        <form class="formheader" action="/funcionalidades/templates/login.html" method="post">
+            {% csrf_token %}
+            <a href="login">
+                Já é Cadastrado?
+            </a>
+        </form> 
+    </div>
 </header>
 
 
@@ -52,15 +61,16 @@
 
 <main>
     <H1>Sobre</H1>
-    <p>Gol! Girls é para meninas que desejam jogar futebol com outras meninas. Percebendo a dificuldade em encontrar parceiras de jogo, a plataforma foi criada para simplificar a hora de bater uma bola! Aqui você pode marcar partidas, decidir o dia, o horário e o local, depois disso é só amarrar as chuteiras e partir para o ataque! Além disso, você pode socializar com outras jogadoras e participar de quantas partidar desejar.
-
-            Eai, bora jogar?</p>
+    <div class="texto">
+        <p>Gol! Girls é para meninas que desejam jogar futebol com outras meninas. Percebendo a dificuldade em encontrar parceiras de jogo, a plataforma foi criada para simplificar a hora de bater uma bola! Aqui você pode marcar partidas, decidir o dia, o horário e o local, depois disso é só amarrar as chuteiras e partir para o ataque! Além disso, você pode socializar com outras jogadoras e participar de quantas partidar desejar.
+        Eai, bora jogar?</p>
+    </div>        
 </main>
 
 
 <footer>
     <div class="patrocinadores">
-    <h3> Patrocinadores </h3>
+    <h3> Apoio </h3>
     <img class="master" src="{%static 'img/mastertech.png' %}" alt="">
     <img class="hack" src="{%static 'img/hack.png' %}" alt="">
     </div>
