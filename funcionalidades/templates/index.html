@@ -2,27 +2,31 @@
 {% load static %}
 {% block conteudo %}
 
-<h1>GOL! GIRLS</h1>
+<link rel="stylesheet" href="{% static 'css/index.css' %}">
+<div class="formulario">
 <h2>Cadastre-se</h2>
 {{msg}}
-<form action="index" method="post">
-    {% csrf_token %}
-    <label>Nome</label>
-    <input type="text" name="nome" required>
+    <form action="index" method="post">
+        {% csrf_token %}
+        <label>Nome</label>
+        <input type="text" name="nome" required>
 
-    <label>Sobrenome</label>
-    <input type="text" name="sobrenome" required>
+        <label>Sobrenome</label>
+        <input type="text" name="sobrenome" required>
 
-    <label>Idade</label>
-    <input type="date" name="idade" required>
+        <label>Idade</label>
+        <input type="date" name="idade" required>
 
-    <label>E-mail</label>
-    <input type="email" name="email" required>
+        <label>E-mail</label>
+        <input type="email" name="email" required>
 
-    <label>Senha</label>
-    <input type="password" name="senha" required>
+        <label>Senha</label>
+        <input type="password" name="senha" required>
 
-    <input type="submit" value="Cadastrar">
-</form>
-
+        <input type="submit" value="Cadastrar">
+    </form>
+</div>    
+<footer>
+    <p>Desenvolvido por Gol!Girls.</p>
+</footer>
 {% endblock %}

@@ -5,16 +5,25 @@
 
 <link rel="stylesheet" href="{% static 'css/login.css' %}">
 
-
-<h1>Login</h1>
-<p>{{msg}}</p>
-
-<img src="{% static 'img/user.png' %}" alt="">
-<form action="/login" method="post">
-    {% csrf_token %}
-    <input type="email" name="email" placeholder="E-mail">
-    <input type="password" name="senha" placeholder="Senha">
-    <input type="submit" value="Enviar">
-</form>
+<section class="formlogin">
+    <h1>Insira seu email e senha para realizar o login</h1>
+    <p>{{msg}}</p>
+    <div class="login1">
+        <div class="img">
+            <img src="{% static 'img/user.png' %}" alt="">
+        </div>
+        <div class="form">
+            <form action="/login" method="post">
+                {% csrf_token %}
+                <input type="email" name="email" placeholder="E-mail">
+                <input type="password" name="senha" placeholder="Senha">
+                <input type="submit" value="Enviar">
+            </form>
+        </div>
+    </div>
+</section>    
+<footer>
+    <p>Desenvolvido por Gol!Girls.</p>
+</footer>    
 
 {% endblock %}

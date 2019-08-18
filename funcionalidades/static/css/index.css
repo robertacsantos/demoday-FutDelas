@@ -1,0 +1,31 @@
+form{
+    width: 30%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 5px;
+    border-radius: 15px;
+}
+.formulario{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+form input{
+    height: 5vh;
+    width: 50vh;
+}
+h2{
+    text-align: center;
+    margin: 15px 0 0 0;
+}
+footer{
+    display: flex;
+    color:white;
+    height: 9vh;
+    justify-content: center;
+    align-items: center;
+}

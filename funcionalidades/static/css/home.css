@@ -14,6 +14,8 @@ header{
 header::after {
     content: "";
     background: url(/static/img/foto.jpg);
+    background-size: 100%;
+    margin: 0 0 36vh 0;
     opacity: 0.5;
     top: 0;
     left: 0;
