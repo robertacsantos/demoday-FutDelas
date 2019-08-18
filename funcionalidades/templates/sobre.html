@@ -1,18 +1,19 @@
 {% extends 'shared/layout.html' %}
 {% load static %}
-
-
 {% block conteudo %}
 
+<link rel="stylesheet" href="{% static 'css/login.css' %}">
 
 <h1>Listagem das Ideias</h1>
 <p>
         {% for partida in partidas %}
+        <div class="exibir">
                 <p>{{partida.pessoa.nome}}</p>
                 <p>{{partida.titulo}}</p>
                 <p>{{partida.data}}</p>
                 <p>{{partida.descricao}}</p>
                 <p id="linha">_____________________</p>
+        </div>
                 
         {% endfor %}
        

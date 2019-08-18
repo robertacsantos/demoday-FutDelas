@@ -2,38 +2,35 @@
 {% load static %}
 {% block conteudo %}
 
-<h1>Gol! Girls</h1>
-{% if pessoa is None %}
-    <h1>Ops, você precisa se cadastrar</h1>
-    <p>
-        <a href="/">clique aqui para se cadastrar</a>
-    </p>
-{% else %}
-    <h2>Cadastre a sua ideia {{pessoa.nome}}</h2>
-    <form action="/partidas" method="post">
-        {% csrf_token %}
-        <input type="hidden" name="email" value="{{pessoa.email}}">
-        <input type="hidden" name="senha" value="{{pessoa.senha}}">
-        <input type="hidden" name="nome" value="{{pessoa.nome}}">
+<link rel="stylesheet" href="{% static 'css/login.css' %}">
+    {% if pessoa is None %}
+        <h1>Ops, você precisa se cadastrar</h1>
+        <p>
+            <a href="/">clique aqui para se cadastrar</a>
+        </p>
+    {% else %}
+        <h2 class="title">Cadastre a sua ideia {{pessoa.nome}}</h2>
+    <div  class="cadastro">    
+        <form action="/partidas" method="post">
+            {% csrf_token %}
+            <input type="hidden" name="email" value="{{pessoa.email}}">
+            <input type="hidden" name="senha" value="{{pessoa.senha}}">
+            <input type="hidden" name="nome" value="{{pessoa.nome}}">
 
-        <input type="text" name="titulo" placeholder="Partida">
-        <label>Descreva sua ideia</label>
-        <textarea name="descricao" cols="30" rows="10" placeholder="Escreva o local e contato para mais informações."></textarea>
-        <input type="datetime-local" name="data">
-        <input type="submit" value="Cadastrar Partida">
-    </form>
-    <p>Ou veja as partidas</p>
-    <form action="/funcionalidades/templates/sobre.html" method="post">
-        {% csrf_token %}
-        <a href="sobre">
-            Conheça nossas partidas
-        </a>
-    </form>
-    <form action="/funcionalidades/templates/userarea.html" method="post">
-        {% csrf_token %}
-        <a href="userarea">
-            Veja os seus eventos
-        </a>
-    </form>
+            <input type="text" name="titulo" placeholder="Partida">
+            <label>Descreva sua ideia</label>
+            <textarea name="descricao" cols="30" rows="10" placeholder="Escreva o local e contato para mais informações."></textarea>
+            <input type="datetime-local" name="data">
+            <input type="submit" value="Cadastrar Partida">
+        </form>
+        <h2 class="title">Ou</h2>
+        <form action="/funcionalidades/templates/sobre.html" method="post" >
+            {% csrf_token %}
+            <a href="sobre" class="ancora">
+                Conheça nossas partidas
+            </a>
+        </form>
+    </div>    
+
 {% endif %}
 {% endblock %}
