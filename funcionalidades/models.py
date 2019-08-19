@@ -45,11 +45,11 @@ class Partida(models.Model):
 
     titulo = models.CharField(
         max_length=255, 
-        verbose_name='Nome de ideia',
+        verbose_name='Nome de partida',
         unique=True)
 
-    descricao = models.TextField(
-        verbose_name='Descreva sua ideia'
+    local = models.TextField(
+        verbose_name='Local da sua partida'
     )
     data = models.DateTimeField(
         max_length=255,

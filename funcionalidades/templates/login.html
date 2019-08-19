@@ -8,11 +8,11 @@
 
 <section class="formlogin">
     <h1>Insira seu email e senha para realizar o login</h1>
-    <p>{{msg}}</p>
     <div class="login1">
         <div class="img">
             <img src="{% static 'img/user.png' %}" alt="">
         </div>
+        <p class="msg">{{msg}}</p>
         <div class="form">
             <form action="/login" method="post">
                 {% csrf_token %}
