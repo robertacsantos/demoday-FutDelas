@@ -67,6 +67,7 @@ h1{
     color: black;
     width:100%;
     text-align: center;
+
 }
 #linha{
     color:white;
@@ -84,5 +85,11 @@ h1{
     border-bottom-left-radius: 15px;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
-    padding: 20px;
+    padding: 15px;
+}
+.button{
+    padding: 12px;
+    background-color: 
+    border-radius: 22px;
+    margin-top: 10px;
 }

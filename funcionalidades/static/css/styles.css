@@ -7,6 +7,7 @@ body{
 
 .logo{
   display: flex;
+animation: 
 }
 
 .info{
@@ -91,7 +92,7 @@ form{
   }
   .hamburger span {
     width: 100%;
-    background: #000;
+    background:#000;
     display: block;
     position: absolute;
     left: 0px;
@@ -116,7 +117,7 @@ form{
     width: 20%;
     height: 100%;
     position: fixed;
-    background: #000;
+    background: #C5C5C5;
     top: 0px;
     left: 0px;
     z-index: 5;
@@ -127,6 +128,8 @@ form{
     -ms-transition: 0.2s all;
     -moz-transition: 0.2s all;
     -o-transition: 0.2s all;
+    text-align: center;
+     
   }
   #navicon {
     display: none;
@@ -162,4 +165,3 @@ form{
     -moz-transform: rotate(-45deg);
     -o-transform: rotate(-45deg);
   }
- 
