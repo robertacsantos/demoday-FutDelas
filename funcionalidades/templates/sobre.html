@@ -9,6 +9,7 @@
 <p>
         {% for partida in partidas %}
         <div class="exibir">
+<<<<<<< HEAD
                 <p>{{partida.pessoa.nome}}</p>
                 <p>{{partida.titulo}}</p>
                 <p>{{partida.data}}</p>
@@ -17,6 +18,19 @@
                         participar desta partida
                 </button>
                 <p id="linha">_____________________</p>
+=======
+                <div class="lista">
+                        <p class="resposta">Criadora: {{partida.pessoa.nome}}</p>
+                        <p class="resposta"> Título: {{partida.titulo}}</p>
+                        <p class="respostas">Hora e Data:{{partida.data}}</p>
+                        <p class="respostas">Local:{{partida.local}}</p>
+                </div>
+                <div class="listabotao">
+                        <button class="listabotao" onclick="participar()">
+                                  Participar dessa partida.
+                        </button>
+                </div>
+>>>>>>> 5fb8017d6359ccca543534a0d1ed87d556d15936
         </div>
 
 

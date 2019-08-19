@@ -8,22 +8,24 @@
 
 <section class="formlogin">
     <h1>Insira seu email e senha para realizar o login</h1>
-    <p>{{msg}}</p>
     <div class="login1">
         <div class="img">
             <img src="{% static 'img/user.png' %}" alt="">
         </div>
+        <p class="msg">{{msg}}</p>
         <div class="form">
             <form action="/login" method="post">
                 {% csrf_token %}
+                <label >Digite seu email</label>
                 <input type="email" name="email" placeholder="E-mail">
+                <label>Digite sua senha</label>
                 <input type="password" name="senha" placeholder="Senha">
                 <input type="submit" value="Enviar">
             </form>
         </div>
     </div>
 </section>    
-    <!-- <footer>
+     <!-- <footer>
         <p>Desenvolvido por Gol!Girls.</p>
     </footer>     -->
 

@@ -14,6 +14,11 @@ label{
     text-align: center;
 }
 
+.msg{
+    padding: 20px;
+    color: red;
+}
+
 .login1{
     display: flex;
     justify-content: center;
@@ -74,7 +79,7 @@ h1{
 }
 .exibir{
     color: white;
-    text-align: center;
+    text-align: initial;
     background-color: #BF9c0D;
     width: 80%;
     border-radius: 2%;
@@ -85,7 +90,12 @@ h1{
     border-bottom-left-radius: 15px;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
-    padding: 15px;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: baseline;
+    align-items: center;
+    justify-content: space-around;
 }
 .button{
     padding: 12px;

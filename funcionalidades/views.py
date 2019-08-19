@@ -60,16 +60,23 @@ def login(request):
     if request.method == 'POST':
         email_form = request.POST.get('email')
         senha_form = request.POST.get('senha')
-        pessoa = Pessoa.objects.filter(email=email_form, senha=senha_form).first()
+        pessoa = Pessoa.objects.filter(email=email_form).first()
 
         if pessoa is None:
             #mandar para página de cadastro
             contexto = {'msg': 'Cadastre-se para criar uma partida'}
             return render(request, 'index.html', contexto)
+        
+
+        if pessoa.senha != senha_form:
+            contexto = {'msg':'Ops, sua senha ou email estão incorretos'}
+            return render(request, 'login.html', contexto)
+            
+        
         else:
-            #mandar para página de partidas
             contexto = {'pessoa': pessoa}
             return render(request, 'partidas.html', contexto)
+            #mandar para página de partidas
 
     return render(request, 'login.html', {})
 
@@ -85,6 +92,7 @@ def cadastrar_partida(request):
             partida.titulo = request.POST.get('titulo')
             partida.descricao = request.POST.get('descricao')
             partida.data = request.POST.get('data')
+            partida.local = request.POST.get('local')
             partida.save()
             return redirect('/sobre') 
     return render(request, 'partidas.html', {})
