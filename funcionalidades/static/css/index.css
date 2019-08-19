@@ -1,3 +1,7 @@
+body{
+    background-image: linear-gradient(to left, #800F75, #027368, #03A696);  
+}
+
 form{
     width: 30%;
     display: flex;
