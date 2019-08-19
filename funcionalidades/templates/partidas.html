@@ -17,14 +17,18 @@
             <input type="hidden" name="senha" value="{{pessoa.senha}}">
             <input type="hidden" name="nome" value="{{pessoa.nome}}">
 
+            <label>Nome da partida</label>
             <input type="text" name="titulo" placeholder="Partida">
-            <label>Descreva sua ideia</label>
-            <textarea name="descricao" cols="30" rows="10" placeholder="Escreva o local e contato para mais informações."></textarea>
-            <input type="datetime-local" name="data">
+            <label>Data da partida</label>     
+            <input type="date" name="data">
+            <label>Horário da partida</label>
+            <input type="time" name="hora">
+            <label>Local da partida</label>
+            <input type="text" name="texto">
             <input type="submit" value="Cadastrar Partida">
         </form>
         <h2 class="title">Ou</h2>
-        <form action="/funcionalidades/templates/sobre.html" method="post" >
+        <form class="conheca" action="/funcionalidades/templates/sobre.html" method="post" >
             {% csrf_token %}
             <a href="sobre" class="ancora">
                 Conheça nossas partidas
