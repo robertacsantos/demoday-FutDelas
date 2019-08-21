@@ -9,7 +9,7 @@
             <a href="/">clique aqui para se cadastrar</a>
         </p>
     {% else %}
-        <h2 class="title">Cadastre a sua ideia {{pessoa.nome}}</h2>
+        <h2 class="title">Cadastre a sua partida, {{pessoa.nome}}!</h2>
     <div  class="cadastro">    
         <form action="/partidas" method="post">
             {% csrf_token %}
@@ -19,7 +19,7 @@
             <label>Nome da partida</label>
             <input type="text" name="titulo" placeholder="Partida">
             <label>Data  e Horário da partida</label>     
-            <input type="datetime" name="data">
+            <input type="datetime-local" name="data">
             <label>Local da partida</label>
             <input type="text" name="local">
             <input type="submit" value="Cadastrar Partida">
